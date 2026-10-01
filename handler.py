@@ -270,7 +270,7 @@ def handler(job: dict) -> dict:
         raise ValueError("source_video_url and audio_url are required")
 
     max_duration = _bounded_int(payload, "max_duration_seconds", 60, 1, 600)
-    inference_steps = _bounded_int(payload, "inference_steps", 20, 20, 50)
+    inference_steps = _bounded_int(payload, "inference_steps", 20, 10, 50)
     guidance_scale = _bounded_float(payload, "guidance_scale", 1.5, 1.0, 3.0)
     seed = _bounded_int(payload, "seed", 1247, -1, 2_147_483_647)
     refresh_avatar = bool(payload.get("refresh_avatar", False))
