@@ -25,6 +25,8 @@ or TTS.
 `inference_steps` accepts 10–50. The official-quality default is 20; lower
 values are useful for speed/quality benchmarking.
 
+The RunPod endpoint follows the `main` branch for worker rebuilds.
+
 The response preserves the existing `video_url` output contract. Source video
 downloads are cached by `avatar_id` on the RunPod Network Volume. Set
 `refresh_avatar` to `true` when replacing an avatar's source material.
